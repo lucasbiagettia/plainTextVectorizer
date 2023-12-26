@@ -1,0 +1,26 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Crea estos archivos a partir de requirements.txt
+.Python
+
+# Directorio de entorno virtual
+venv/
+env/
+
+# Logs y archivos temporales
+*.log
+*.swp
+*.tmp
+
+# Archivo de configuración local
+*.ini
+
+# Carpeta de archivos estáticos generados por collectstatic
+static/
+
+# Carpeta de archivos media generados
+media/
