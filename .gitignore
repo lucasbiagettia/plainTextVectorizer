@@ -4,23 +4,20 @@ __pycache__/
 *.pyo
 *.pyd
 
-# Crea estos archivos a partir de requirements.txt
 .Python
 
-# Directorio de entorno virtual
+# Virtual enviroment
 venv/
-env/
 
-# Logs y archivos temporales
+# Logs and temp
 *.log
 *.swp
 *.tmp
 
-# Archivo de configuración local
+# Config files
 *.ini
 
-# Carpeta de archivos estáticos generados por collectstatic
-static/
+# Sample files
+files/
 
-# Carpeta de archivos media generados
-media/
+

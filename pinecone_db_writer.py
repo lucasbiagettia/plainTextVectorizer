@@ -22,9 +22,9 @@ class PineconeDbWritter:
         self._embed_model = EmbeddingModelSingleton()
 
     def create_index(self, index_name):
-        embedded =        _embed_model.embed_documents("get dim")
+        embedded = self._embed_model.embed_documents("get dim")
         if index_name not in pinecone.list_indexes():
-            self._index = pinecone.create_index(
+            pinecone.create_index(
                 index_name,
                 dimension=len(embedded[0]),
                 metric='cosine'
@@ -32,8 +32,9 @@ class PineconeDbWritter:
             
             while not pinecone.describe_index(index_name).status['ready']:
                 time.sleep(1)
+        self._index = pinecone.Index(index_name)
 
-    def write(files):
+    def write(self, files):
         if self._index is None:
             raise ValueError("Index not created. Call create_index first.")
 

@@ -21,5 +21,4 @@ class EmbeddingModelSingleton:
     def embed_documents(self, text):
         return self.embed_model.embed_documents(text)
 
-# Access the singleton instance and use its methods:
 
