@@ -1,7 +1,10 @@
 from model import EmbeddingModelSingleton
 import pinecone
 import time
+import os
 
+PINECONE_KEY = os.getenv('PINECONE_KEY')
+PINECONE_ENV = os.getenv('PINECONE_ENV')
 
 class PineconeDbWritter:
     _instance = None
@@ -16,8 +19,8 @@ class PineconeDbWritter:
 
     def _initialize(self):
         pinecone.init(
-            api_key='571819e1-2c00-4ab3-a7b0-8690c0d0ae1a',
-            environment='gcp-starter'
+            api_key=PINECONE_KEY,
+            environment=PINECONE_ENV
         )
         self._embed_model = EmbeddingModelSingleton()
 
